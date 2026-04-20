@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(22, 157, 253);
+    height: 100vh;
+    width: 250px;
+    color: white;
+    padding: 16px 0 0 0;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    /* for sidebar collapse*/
+    overflow: hidden;
+    align-items: center;
+
+}
+
+
+
+sidebar .first-half,
+sidebar .second-half {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    width: 80%;
+
+}
+
+sidebar .second-half {
+    margin-top: 25px;
+
+}
+
+sidebar img {
+    height: 1em;
+    width: 1em;
+}
+
+sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* width: 100%; */
+}
+
+.first-half a:hover,
+.second-half a:hover {
+    transform: scale(1.05);
+    text-shadow: 2px 2px 5px rgb(244, 244, 244);
+    transition: text-shadow 0.1s ease;
+
+
+}
+
+sidebar .first-half a:hover img,
+sidebar .second-half a:hover img {
+    filter: drop-shadow(2px 2px 5px rgb(244, 244, 244));
+    transition: text-shadow 0.1s ease;
+
+
+}
+
+h1#title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1#title:hover {
+    text-shadow: 2px 2px 5px rgb(244, 244, 244);
+    transition: text-shadow 0.1s ease;
+
+}
+
+h1#title:hover img {
+    filter: drop-shadow(2px 2px 5px rgb(244, 244, 244));
+    transition: text-shadow 0.1s ease;
+}
+
+sidebar.collapsed {
+    width: 55px;
+    align-items: center;
+
+}
+
+sidebar.collapsed a {
+    justify-content: center;
+    gap: 1px;
+
+}
+
+sidebar.collapsed span {
+    display: none;
+
+}
+
+sidebar.collapsed .first-half,
+sidebar.collapsed .second-half {
+    /* width: 55px;
+    align-items: center; */
+    gap: 20px;
+    /* gap badha do */
+}
+
+@media (max-width: 480px) {
+    sidebar {
+        width: 190px;
+        align-items: center;
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    }
+
+    sidebar.collapsed {
+        width: 30px;
+    }
+}
