@@ -9,10 +9,13 @@ body {
     grid-template-rows: 170px 1fr;
 }
 
+
 sidebar {
     display: flex;
     flex-direction: column;
     background-color: rgb(22, 157, 253);
+    position: sticky;
+    top: 0;
     height: 100vh;
     width: 250px;
     color: white;
@@ -246,7 +249,135 @@ header .lower_half {
 }
 
 main {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    padding: 20px;
     background-color: #E1E7EF;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.project_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.projects h2 {
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.project_card {
+    /* border: 1px solid #cbd0d4; */
+    border-radius: 20px;
+    height: 330px;
+    width: 350px;
+    background-color: white;
+    border-left: 8px solid #EEB241;
+    font-size: 0.9em;
+    font-weight: 200;
+    padding: 5px;
+    color: rgb(89, 88, 88);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.project_card_heading a {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.project_card img {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    ;
+}
+
+.project_card_thumbnail {
+    /* padding-top: 5px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.project_card_thumbnail img {
+    height: 180px;
+    width: 300px;
+
+}
+
+.project_card_thumbnail div {
+    padding: 5px 10px;
+}
+
+.project_links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 10px 20px;
+
+}
+
+.project_links img {
+    height: 25px;
+    width: 25px;
+}
+
+.exercises {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.exercises h2 {
+    padding-left: 20px;
+
+}
+
+.java_grid {
+
+    /* border: 1px solid #cbd0d4; */
+    border-radius: 20px;
+    height: auto;
+    width: 240px;
+    background-color: white;
+    padding: 5px;
+}
+
+.exc {
+    border-bottom: 1px solid #cbd0d4;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.exc_heading a {
+    color: rgb(22, 157, 253);
+    font-weight: 800;
+    font-size: 1.1em;
+    padding: 5px 10px;
+}
+
+.exc_description {
+    font-size: 0.9em;
+    font-weight: 200;
+    padding: 5px;
+    color: rgb(89, 88, 88);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.oops_grid {
+
+    /* border: 1px solid #cbd0d4; */
+    border-radius: 20px;
+    height: auto;
+    width: 240px;
+    background-color: white;
+    padding: 5px;
 }
